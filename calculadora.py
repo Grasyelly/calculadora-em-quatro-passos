@@ -6,7 +6,7 @@ while True:
     num1 = int(input("..................Calculadora..................\n\n             Informe o 1º número: "))
 
     #Escolha da operação
-    op = input("\n...................Operações...................\n\n                 (+) Adição\n                 (-) Subtração\n                 \n...............................................\n          Informe a operação desejada: ")
+    op = input("\n...................Operações...................\n\n                 (+) Adição\n                 (-) Subtração\n                 (*) Multiplicação\n                 (/) Divisão\n                 \n...............................................\n          Informe a operação desejada: ")
 
     #Inserção do segundo número
     num2 = int(input("\n...............................................\n             Informe o 2º número: "))
@@ -18,6 +18,17 @@ while True:
     #Subtração
     elif op == '-':
         result = num1 - num2
+    
+    #Multiplicação
+    elif op == '*':
+        result = num1 * num2
+
+    #Divisão
+    elif op == '/':
+        if num2 == 0:
+            result = 'Impossível!'
+        else:
+            result = num1 / num2
     
     #Impressão do resultado
     print('\n..................Resultado..................\n\n                 ' + str(num1) + ' ' + str(op) + ' ' + str(num2) + ' = ' + str(result))
